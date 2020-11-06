@@ -4,4 +4,5 @@ from media_retriever.APIs import api
 
 urlpatterns = [
     path('getAll/', api.getAll),
+    path('get/', api.get),
 ]

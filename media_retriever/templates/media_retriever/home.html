@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    hello
+    <form>
+    {% csrf_token %}
+        <input>
+    </form>
+</body>
+
+
+<script>
+    var arr = [1, 2, 3, 4];
+
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    $.ajax({
+      url: '/media_retriever/api/get/',
+      type: 'POST',
+      data: {'ID': 3, 'csrfmiddlewaretoken': csrftoken},
+      success: function (result) {
+          console.log(result)
+      }
+    });
+
+</script>
+</html>
